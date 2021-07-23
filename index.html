@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css"/>
+    <title>Menù</title>
+</head>
+<body>
+    <section class="Menù-Section">
+        <div class="Titolo ">
+            <h1>
+                Il Nostro Menù
+            </h1>
+            <div class="Title-Line col-lg-2 col-md-3 col-sm-4"></div>
+        </div>
+        <!-- Category Buttons -->
+        <div class="Category-Buttons">
+            <button data-id="tutti" class="Btn">Tutto</button>
+            <button data-id="colazione" class="Btn">Colazione</button>
+            <button data-id="pranzo" class="Btn">Pranzo</button>
+            <button data-id="drinks" class="Btn">Drinks</button>
+            <button data-id="cena" class="Btn">Cena</button>
+        </div>
+        <!-- Menu Items -->
+        <div class="section-center">
+            <!-- <header>
+                <h4  style="font-weight: bold;" >pancakes</h4>
+                <h4  class="prezzo" >$14.99</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsum hic facere perferendis, totam natus ipsa modi itaque! Corporis odio provident, veritatis accusantium praesentium veniam consequuntur facere a eveniet eum.
+                </p>
+                <button class="BtnElimina">Elimina</button>
+            </header> -->
+        </div>
+    </section>
+    <div class="container form-container">
+        <form class="aggiungi">
+            <p>Aggiungi</p>
+            <label for="fname">Nome</label><br>
+            <input placeholder="Aggiungi il titolo del tuo prodotto" class="Addtitle" type="text"><br>
+            <label  for="lname">Prezzo</label><br>
+            <input placeholder="Aggiungi il prezzo del tuo prodotto" class="prezzoAdd" type="text"><br>
+            <label for="fname">Descrizione</label><br>
+            <input placeholder="Aggiungi una descrizione al tuo prodotto" class="descrizioneAdd" type="text"><br>
+            <label for="fname">Cetegoria</label><br>
+            <input placeholder="Aggiungi una categoria al tuo prodotto" class="addCategory" type="text"><br>
+            <button class="BtnAggiungi">Aggiungi</button>
+        </form>
+    </div>
+    <div>
+    <script src="script.js"></script>
+</body>
+</html>
