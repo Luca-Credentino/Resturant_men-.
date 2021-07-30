@@ -63,7 +63,7 @@ const aggiungiAlMenuBtn = document.querySelector(".BtnAggiungi");
 const filterButtons = document.querySelectorAll(".Btn");
 const sezioneCentrale = document.querySelector(".section-center");
 
-DisplayMenu(menù); 
+DisplayMenu(menù);
 
   function DisplayMenu(ArrayMenu){ // ArrayMenu: è il nostro paramentro che al momento della dichiarazione della fuzione "DisplayMenu()" chiameremo come parametro il nostro array di oggetti.
     let displayMenu = ArrayMenu.map((menuProprietà)=>{
@@ -109,14 +109,19 @@ DisplayMenu(menù);
       const category = document.querySelector('.addCategory').value;
       const prezzo = document.querySelector('.prezzoAdd').value;
       const desc = document.querySelector('.descrizioneAdd').value;
-      var AddedMenu = [{
-        title,
-        category,
-        prezzo,
-        desc,
-      },];
-       menù = AddedMenu.concat(menù);
-       json = JSON.stringify(menù);
-       console.log(json)
-       return DisplayMenu(menù);
+      const lettere =  /^[A-Za-z]+/;
+      if (!prezzo.match(lettere) ) {
+        var AddedMenu = [{
+          title,
+          category,
+          prezzo,
+          desc,
+        },];
+         menù = AddedMenu.concat(menù);
+         json = JSON.stringify(menù);
+         console.log(json)
+         DisplayMenu(menù);
+      }else{
+        alert('Il prezzo deve essere espresso in numeri')
+      }
       });
